@@ -1,5 +1,6 @@
 #ifndef _MEMO_H_
 #define _MEMO_H_
+#include <stdlib.h>
 /*
  * memo.h
  * Funções para alocação de memória.

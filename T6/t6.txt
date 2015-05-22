@@ -24,7 +24,7 @@ expressões aritméticas. Para facilitar a implementação, a pilha deve armazen
 nós da árvore. O algoritmo de construção da árvore funciona da seguinte forma:
 Lê próximo operador ou operando.
 Se operando
-	cria um nó operando e empilha.
+	cria um nó operando e empilha
 Se operador
 	desempilha os 2 operandos da pilha.
 	cria um nó operador e insere na esquerda e direita os operandos.

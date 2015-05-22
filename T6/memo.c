@@ -1,8 +1,8 @@
 /*
  * memo.c
- * Funções para alocação de memória.
+ * Funções para alocação de memória
  *
- * The MIT License (MIT)
+ * The MIT License 
  * 
  * Copyright (c) 2014, 2015 João V. F. Lima, UFSM
  * 
