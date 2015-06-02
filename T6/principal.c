@@ -38,8 +38,10 @@ int main(int argc, char **argv)
 {
 	/* exemplo simples de árvore */
 	arv_t* raiz;
+	arv_t* raiz_2;
 	op_t soma, n1, n2;
 	pilha_t* pilha;
+	pilha= pilha_cria();
 
 	/* inicia expressão */
 	/* operador + */
@@ -53,10 +55,14 @@ int main(int argc, char **argv)
 	n2.u.operando = 2.0;
 
 	/* cria uma árvore */
-	raiz = arv_cria( soma );
-	raiz = arv_insere_esquerda( raiz, n1 );
-	raiz = arv_insere_direita( raiz, n2 );
+	raiz = arv_cria(soma);
    arv_imprime_pre_ordem(raiz);
+   pilha_insere(pilha, raiz);
+   printf("\n\n");
+   arv_destroi(raiz);
+   raiz_2= arv_cria_vazia();
+   raiz_2= pilha_remove(pilha);
+   arv_imprime_pre_ordem(raiz_2);
 
 
 	return 0;

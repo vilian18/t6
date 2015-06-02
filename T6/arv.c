@@ -26,7 +26,10 @@ arv_t* arv_insere_direita(arv_t* arv, op_t op){
 
 void arv_imprime_pre_ordem(arv_t* arv){
    if(arv!=NULL){
-      printf("%c",(op_t)arv->dado);
+      if(arv->dado.tipo==OPERANDO)
+         printf(" %g ",arv->dado.u.operando);
+      else
+         printf(" %c ", arv->dado.u.operador);
       arv_imprime_pre_ordem(arv->esq);
       arv_imprime_pre_ordem(arv->dir);
    }
@@ -34,4 +37,8 @@ void arv_imprime_pre_ordem(arv_t* arv){
 
 arv_t* arv_cria_vazia(void){
    return NULL;
+}
+
+void arv_destroi(arv_t* arv){
+   free(arv);
 }

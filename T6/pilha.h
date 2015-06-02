@@ -54,9 +54,9 @@ bool pilha_vazia(pilha_t* p);
 void pilha_insere(pilha_t* p, arv_t* arv);
 
 /* remove e retorna o nó operador/operando no topo da pilha */
-arv_t* pilha_remove(pilha_t p);
+arv_t* pilha_remove(pilha_t* p);
 
 /* retorna true se p for uma pilha válida */
-bool pilha_valida(pilha_t p);
+bool pilha_valida(pilha_t* p);
 
 #endif

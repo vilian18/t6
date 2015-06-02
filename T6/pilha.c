@@ -1,4 +1,5 @@
 #include "pilha.h"
+#include "arv.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -26,7 +27,7 @@ void pilha_insere(pilha_t* p, arv_t* arv){
    p->N++;
 }
 
-arv_t* pilha_remove(pilha_t p){
+arv_t* pilha_remove(pilha_t* p){
    if(!pilha_vazia(p)){
       arv_t* arv_= (arv_t*)memo_aloca(sizeof(arv_t));
       arv_= p->arv[p->N-1];
@@ -35,7 +36,7 @@ arv_t* pilha_remove(pilha_t p){
    }
 }
 
-bool pilha_valida(pilha_t p){
+bool pilha_valida(pilha_t* p){
    return (p!=NULL);
 }
 
