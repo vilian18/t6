@@ -35,6 +35,30 @@ void arv_imprime_pre_ordem(arv_t* arv){
    }
 }
 
+void arv_imprime_em_ordem(arv_t* arv){
+   if(arv!=NULL){
+      arv_imprime_em_ordem(arv->esq);
+      if(arv->dado.tipo==OPERANDO)
+         printf(" %g ",arv->dado.u.operando);
+      else
+         printf(" %c ", arv->dado.u.operador);
+      arv_imprime_em_ordem(arv->dir);
+   }
+}
+
+void arv_imprime_pos_ordem(arv_t* arv){
+   if(arv!=NULL){
+      arv_imprime_pos_ordem(arv->esq);
+      arv_imprime_pos_ordem(arv->dir);
+      if(arv->dado.tipo==OPERANDO)
+         printf(" %g ",arv->dado.u.operando);
+      else
+         printf(" %c ", arv->dado.u.operador);
+
+   }
+}
+
+
 arv_t* arv_cria_vazia(void){
    return NULL;
 }
